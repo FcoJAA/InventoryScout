@@ -42,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:backgroundTint="#0022FF"
+            android:onClick="changeToLogin"
             android:text="Log in" />
 
         <Space
@@ -54,6 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:backgroundTint="#0022FF"
+            android:onClick="changeToSignUp"
             android:text="Sign Up" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
