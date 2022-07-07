@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InventoryScout">
         <activity
+            android:name=".myprofile"
+            android:exported="false" />
+        <activity
             android:name=".resetpassword"
             android:exported="false" />
         <activity
