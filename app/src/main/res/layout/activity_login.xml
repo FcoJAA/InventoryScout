@@ -20,31 +20,74 @@
             android:layout_width="match_parent"
             android:layout_height="50dp" />
 
-        <EditText
-            android:id="@+id/editTextTextEmailAddress"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="26dp"
+            android:text="Email:"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/et1login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autoSizeTextType="uniform"
+            android:background="@color/purple_500"
+            android:backgroundTint="#7AFFFFFF"
+            android:backgroundTintMode="src_in"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            />
+            android:hint="Introduce tu correo"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorHint="@color/black"
+            android:textSize="21sp"
+            android:typeface="serif" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="30dp" />
 
-        <EditText
-            android:id="@+id/editTextTextPassword"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:text="Password:"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/et2login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autoSizeTextType="uniform"
+            android:background="@color/purple_500"
+            android:backgroundTint="#7AFFFFFF"
+            android:backgroundTintMode="src_in"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:hint="Introduce tu contraseña"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textColorHint="@color/black"
+            android:textSize="21sp"
+            android:typeface="serif" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="30dp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn1login"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -55,7 +98,7 @@
             android:layout_height="30dp" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btn2login"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
