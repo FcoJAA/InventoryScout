@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/iventorywallpaper1"
+    android:onClick="changeToResetPassword"
     tools:context=".login">
 
     <LinearLayout
@@ -41,7 +42,7 @@
             android:backgroundTint="#7AFFFFFF"
             android:backgroundTintMode="src_in"
             android:ems="10"
-            android:hint="Introduce tu correo"
+            android:hint="Enter your email"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -102,6 +103,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:onClick="changeToResetPassword"
             android:text="Reset your password" />
 
     </LinearLayout>
