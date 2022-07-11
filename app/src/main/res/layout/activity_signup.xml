@@ -106,6 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:backgroundTint="#0831FF"
+            android:onClick="registerUser"
             android:text="Sign Up" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
