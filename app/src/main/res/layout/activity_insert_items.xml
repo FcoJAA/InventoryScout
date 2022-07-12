@@ -67,7 +67,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editTextNumber"
+                        android:id="@+id/etinsert1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -75,7 +75,7 @@
                         android:inputType="number" />
 
                     <EditText
-                        android:id="@+id/editTextNumber2"
+                        android:id="@+id/etinsert2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -83,7 +83,7 @@
                         android:inputType="number" />
 
                     <EditText
-                        android:id="@+id/editTextNumber3"
+                        android:id="@+id/etinsert3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -97,7 +97,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button7"
+                        android:id="@+id/btnInsert1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -109,7 +109,7 @@
                         android:layout_weight="1" />
 
                     <Button
-                        android:id="@+id/button8"
+                        android:id="@+id/btnInsert2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -121,7 +121,7 @@
                         android:layout_weight="1" />
 
                     <Button
-                        android:id="@+id/button9"
+                        android:id="@+id/btnInsert3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -183,7 +183,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editTextNumber4"
+                        android:id="@+id/etinsert4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -191,7 +191,7 @@
                         android:inputType="number" />
 
                     <EditText
-                        android:id="@+id/editTextNumber5"
+                        android:id="@+id/etinsert5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -199,7 +199,7 @@
                         android:inputType="number" />
 
                     <EditText
-                        android:id="@+id/editTextNumber6"
+                        android:id="@+id/etinsert6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -213,7 +213,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button10"
+                        android:id="@+id/btnInsert4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -225,7 +225,7 @@
                         android:layout_weight="1" />
 
                     <Button
-                        android:id="@+id/button11"
+                        android:id="@+id/btnInsert5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -237,7 +237,7 @@
                         android:layout_weight="1" />
 
                     <Button
-                        android:id="@+id/button12"
+                        android:id="@+id/btnInsert6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -300,7 +300,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editTextNumber7"
+                        android:id="@+id/etinsert7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -308,7 +308,7 @@
                         android:inputType="number" />
 
                     <EditText
-                        android:id="@+id/editTextNumber8"
+                        android:id="@+id/etinsert8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -316,7 +316,7 @@
                         android:inputType="number" />
 
                     <EditText
-                        android:id="@+id/editTextNumber9"
+                        android:id="@+id/etinsert9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -330,7 +330,7 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button13"
+                        android:id="@+id/btnInsert7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -342,7 +342,7 @@
                         android:layout_weight="1" />
 
                     <Button
-                        android:id="@+id/button14"
+                        android:id="@+id/btnInsert8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -354,7 +354,7 @@
                         android:layout_weight="1" />
 
                     <Button
-                        android:id="@+id/button15"
+                        android:id="@+id/btnInsert9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
