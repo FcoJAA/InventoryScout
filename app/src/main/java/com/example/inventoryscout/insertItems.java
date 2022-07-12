@@ -44,49 +44,49 @@ public class insertItems extends AppCompatActivity {
     }
 
     public void insertItem1(View view){
-
+        //Item1
         Map<String, Object> data1 = new HashMap<>();
         String item1 = etinsert1.getText().toString();
-        data1.put("Cantidad", item1 );
-
+        data1.put("Unidades", item1 );
+        //Item2
         Map<String, Object> data2 = new HashMap<>();
         String item2 = etinsert2.getText().toString();
-        data2.put("Cantidad", item2 );
-
+        data2.put("Unidades", item2 );
+        //Item3
         Map<String, Object> data3 = new HashMap<>();
         String item3 = etinsert3.getText().toString();
-        data3.put("Cantidad", item3 );
-
+        data3.put("Unidades", item3 );
+        //Item4
         Map<String, Object> data4 = new HashMap<>();
         String item4 = etinsert4.getText().toString();
-        data4.put("Tornillos B", item4 );
-
+        data4.put("Unidades", item4 );
+        //Item5
         Map<String, Object> data5 = new HashMap<>();
         String item5 = etinsert5.getText().toString();
-        data5.put("Lijas", item5 );
-
+        data5.put("Unidades", item5 );
+        //Item6
         Map<String, Object> data6 = new HashMap<>();
         String item6 = etinsert6.getText().toString();
-        data6.put("Estropajos", item6 );
-
+        data6.put("Unidades", item6 );
+        //Item7
         Map<String, Object> data7 = new HashMap<>();
         String item7 = etinsert7.getText().toString();
-        data7.put("Destornillador de Estrella", item7 );
-
+        data7.put("Unidades", item7 );
+        //Item8
         Map<String, Object> data8 = new HashMap<>();
         String item8 = etinsert8.getText().toString();
-        data8.put("Arandela", item8 );
-
+        data8.put("Unidades", item8 );
+        //Item8
         Map<String, Object> data9 = new HashMap<>();
         String item9 = etinsert9.getText().toString();
-        data9.put("Cinta Americana", item9 );
+        data9.put("Unidades", item9 );
 
         if(item1.equals("")){}else {
             db.collection(colletionpath1).document("Tornillos").set(data1)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    /*.addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) { Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show(); }
-                    })
+                    })*/
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show(); }
@@ -94,10 +94,6 @@ public class insertItems extends AppCompatActivity {
         }
         if(item2.equals("")){}else {
             db.collection(colletionpath1).document("Tuercas").set(data2)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) { Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show(); }
-                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show(); }
@@ -105,10 +101,6 @@ public class insertItems extends AppCompatActivity {
         }
         if(item3.equals("")){}else{
             db.collection(colletionpath1).document("Tuberias Acero").set(data3)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
-                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
@@ -116,10 +108,6 @@ public class insertItems extends AppCompatActivity {
         }
         if(item4.equals("")){}else{
             db.collection(colletionpath1).document("Tornillo B").set(data4)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
-                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
@@ -127,10 +115,6 @@ public class insertItems extends AppCompatActivity {
         }
         if(item5.equals("")){}else{
             db.collection(colletionpath1).document("Lija").set(data5)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
-                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
@@ -138,10 +122,6 @@ public class insertItems extends AppCompatActivity {
         }
         if(item6.equals("")){}else{
             db.collection(colletionpath1).document("Estropajo").set(data6)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
-                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
@@ -149,10 +129,6 @@ public class insertItems extends AppCompatActivity {
         }
         if(item7.equals("")){}else{
             db.collection(colletionpath1).document("Destornillador de Estrella").set(data7)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
-                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
@@ -160,10 +136,6 @@ public class insertItems extends AppCompatActivity {
         }
         if(item8.equals("")){}else{
             db.collection(colletionpath1).document("Arandela").set(data8)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
-                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
@@ -171,10 +143,6 @@ public class insertItems extends AppCompatActivity {
         }
         if(item9.equals("")){}else{
             db.collection(colletionpath1).document("Cinta Americana").set(data9)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
-                    })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
