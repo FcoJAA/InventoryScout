@@ -94,39 +94,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btnInsert1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150sp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#2E9707"
+                        android:gravity="center"
                         android:onClick="insertItem1"
-                        android:text="Añadir" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:id="@+id/btnInsert2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Añadir" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:id="@+id/btnInsert3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Añadir" />
+                        android:text="add" />
 
                 </LinearLayout>
 
@@ -134,7 +113,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="80sp"
+                android:layout_height="60sp"
                 android:layout_weight="1" />
 
             <LinearLayout
@@ -211,38 +190,17 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btnInsert4"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150sp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Añadir" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:id="@+id/btnInsert5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Añadir" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:id="@+id/btnInsert6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Añadir" />
+                        android:backgroundTint="#2E9707"
+                        android:onClick="insertItem1"
+                        android:text="Add" />
 
                 </LinearLayout>
 
@@ -250,8 +208,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="80sp"
-                android:layout_weight="1" />
+                android:layout_height="60sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -328,38 +285,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/btnInsert7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Añadir" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <Button
                         android:id="@+id/btnInsert8"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150sp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Añadir" />
-
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <Button
-                        android:id="@+id/btnInsert9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Añadir" />
+                        android:backgroundTint="#2E9707"
+                        android:text="Add" />
 
                 </LinearLayout>
 
@@ -367,7 +301,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="80sp"
+                android:layout_height="60sp"
                 android:layout_weight="1" />
 
         </LinearLayout>

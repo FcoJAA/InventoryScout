@@ -25,7 +25,6 @@ public class insertItems extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     //TODO ESTE INVENTARIO SERA COMUN PARA TODA LA GENTE QUE USE ESTA APLICACION
     final String colletionpath1 = "MainInventory";
-    final String colletionName = "Inventory";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,23 +45,141 @@ public class insertItems extends AppCompatActivity {
 
     public void insertItem1(View view){
 
+        Map<String, Object> data1 = new HashMap<>();
         String item1 = etinsert1.getText().toString();
+        data1.put("Cantidad", item1 );
 
-        Map<String, Object> data = new HashMap<>();
-        data.put("Tornillo", item1 );
+        Map<String, Object> data2 = new HashMap<>();
+        String item2 = etinsert2.getText().toString();
+        data2.put("Cantidad", item2 );
 
-        db.collection(colletionpath1).document(colletionName).set(data)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();
-                    }
-                });
+        Map<String, Object> data3 = new HashMap<>();
+        String item3 = etinsert3.getText().toString();
+        data3.put("Cantidad", item3 );
+
+        Map<String, Object> data4 = new HashMap<>();
+        String item4 = etinsert4.getText().toString();
+        data4.put("Tornillos B", item4 );
+
+        Map<String, Object> data5 = new HashMap<>();
+        String item5 = etinsert5.getText().toString();
+        data5.put("Lijas", item5 );
+
+        Map<String, Object> data6 = new HashMap<>();
+        String item6 = etinsert6.getText().toString();
+        data6.put("Estropajos", item6 );
+
+        Map<String, Object> data7 = new HashMap<>();
+        String item7 = etinsert7.getText().toString();
+        data7.put("Destornillador de Estrella", item7 );
+
+        Map<String, Object> data8 = new HashMap<>();
+        String item8 = etinsert8.getText().toString();
+        data8.put("Arandela", item8 );
+
+        Map<String, Object> data9 = new HashMap<>();
+        String item9 = etinsert9.getText().toString();
+        data9.put("Cinta Americana", item9 );
+
+        if(item1.equals("")){}else {
+            db.collection(colletionpath1).document("Tornillos").set(data1)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) { Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show(); }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show(); }
+                    });
+        }
+        if(item2.equals("")){}else {
+            db.collection(colletionpath1).document("Tuercas").set(data2)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) { Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show(); }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show(); }
+                    });
+        }
+        if(item3.equals("")){}else{
+            db.collection(colletionpath1).document("Tuberias Acero").set(data3)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
+                    });
+        }
+        if(item4.equals("")){}else{
+            db.collection(colletionpath1).document("Tornillo B").set(data4)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
+                    });
+        }
+        if(item5.equals("")){}else{
+            db.collection(colletionpath1).document("Lija").set(data5)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
+                    });
+        }
+        if(item6.equals("")){}else{
+            db.collection(colletionpath1).document("Estropajo").set(data6)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
+                    });
+        }
+        if(item7.equals("")){}else{
+            db.collection(colletionpath1).document("Destornillador de Estrella").set(data7)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
+                    });
+        }
+        if(item8.equals("")){}else{
+            db.collection(colletionpath1).document("Arandela").set(data8)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
+                    });
+        }
+        if(item9.equals("")){}else{
+            db.collection(colletionpath1).document("Cinta Americana").set(data9)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {  Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();  }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) { Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();  }
+                    });
+        }
     }
+
 }
