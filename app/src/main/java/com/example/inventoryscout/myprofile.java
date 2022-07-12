@@ -18,6 +18,8 @@ public class myprofile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myprofile);
+
+        mAuth =FirebaseAuth.getInstance();
     }
 
     public void insertItem(View view){

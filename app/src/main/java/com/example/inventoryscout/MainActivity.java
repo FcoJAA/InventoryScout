@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth =FirebaseAuth.getInstance();
     }
 
     public void changeToLogin(View view){
@@ -32,9 +35,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeToProfile(View view){
-        //TODO DETECTAR SI ESTA LOGEADO Y ENVIAR AL LOGIN
-        Intent i = new Intent(this,myprofile.class);
-        startActivity(i);
+        if(mAuth.getCurrentUser() != null){
+            Intent i = new Intent(this, myprofile.class);
+            startActivity(i);
+        }else {
+            Toast.makeText(this, "Debe iniciar sesion primero", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(this, login.class);
+            startActivity(i);
+        }
     }
 
     //MenuBar

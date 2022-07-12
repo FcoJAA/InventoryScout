@@ -23,8 +23,9 @@ public class insertItems extends AppCompatActivity {
 
     EditText etinsert1,etinsert2,etinsert3,etinsert4,etinsert5,etinsert6,etinsert7,etinsert8,etinsert9;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    String colletionpath1 = "MainInventory";
-    String colletionName = "Inventory";
+    //TODO ESTE INVENTARIO SERA COMUN PARA TODA LA GENTE QUE USE ESTA APLICACION
+    final String colletionpath1 = "MainInventory";
+    final String colletionName = "Inventory";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
