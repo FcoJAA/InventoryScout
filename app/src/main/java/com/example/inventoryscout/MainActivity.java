@@ -31,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void changeToProfile(View view){
+        //TODO DETECTAR SI ESTA LOGEADO Y ENVIAR AL LOGIN
+        Intent i = new Intent(this,myprofile.class);
+        startActivity(i);
+    }
+
     //MenuBar
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menubar1,menu);

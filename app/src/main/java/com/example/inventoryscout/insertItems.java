@@ -1,15 +1,30 @@
 package com.example.inventoryscout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class insertItems extends AppCompatActivity {
 
     EditText etinsert1,etinsert2,etinsert3,etinsert4,etinsert5,etinsert6,etinsert7,etinsert8,etinsert9;
-    Button btnInsert1,btnInsert2,btnInsert3,btnInsert4,btnInsert5,btnInsert6,btnInsert7,btnInsert8,btnInsert9;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    String colletionpath1 = "MainInventory";
+    String colletionName = "Inventory";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +43,25 @@ public class insertItems extends AppCompatActivity {
 
     }
 
-    public void insertTornillo(){
+    public void insertItem1(View view){
 
+        String item1 = etinsert1.getText().toString();
+
+        Map<String, Object> data = new HashMap<>();
+        data.put("Tornillo", item1 );
+
+        db.collection(colletionpath1).document(colletionName).set(data)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(insertItems.this, "Introducido Correctamente", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(insertItems.this, "ERROR", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }
