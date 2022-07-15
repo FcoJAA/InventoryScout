@@ -25,23 +25,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeToLogin(View view){
-        Intent i = new Intent(this,login.class);
-        startActivity(i);
+        startActivity(new Intent(this,login.class));
     }
 
     public void changeToSignUp(View view){
-        Intent i = new Intent(this,signup.class);
-        startActivity(i);
+        startActivity(new Intent(this,signup.class));
     }
 
     public void changeToProfile(View view){
         if(mAuth.getCurrentUser() != null){
-            Intent i = new Intent(this, myprofile.class);
-            startActivity(i);
+            startActivity(new Intent(this, myprofile.class));
         }else {
             Toast.makeText(this, "Debe iniciar sesion primero", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(this, login.class);
-            startActivity(i);
+            startActivity(new Intent(this, login.class));
         }
     }
 
@@ -54,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.option1){
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(i);
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
             mAuth.signOut();
         }
         return super.onOptionsItemSelected(item);

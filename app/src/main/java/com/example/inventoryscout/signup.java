@@ -35,7 +35,6 @@ public class signup extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
     }
 
     public void registerUser(View view){
@@ -64,19 +63,5 @@ public class signup extends AppCompatActivity {
             Toast.makeText(this, "Tamaño deficiente de la contraseña.", Toast.LENGTH_SHORT).show();
         }
 
-        /* mAuth.signInWithCustomToken()
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            FirebaseUser user = mAuth.getCurrentUser();
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(signup.this, "Error de Registro", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });*/
     }
-    //FirebaseAuth.getInstance().signOut();
 }

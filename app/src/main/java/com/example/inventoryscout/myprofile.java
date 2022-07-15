@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class myprofile extends AppCompatActivity {
+public  class myprofile extends AppCompatActivity {
 
     public FirebaseAuth mAuth;
 
@@ -23,12 +23,14 @@ public class myprofile extends AppCompatActivity {
     }
 
     public void insertItem(View view){
-        Intent i = new Intent(this,insertItems.class);
-        startActivity(i);
+        startActivity(new Intent(this,insertItems.class));
     }
     public void showInventory(View view){
-        Intent i = new Intent(this,ShowInventory.class);
-        startActivity(i);
+        startActivity(new Intent(this,ShowInventory.class));
+    }
+
+    public void changeToResetPassword(View view){
+        startActivity(new Intent(this,resetpassword.class));
     }
 
     //MenuBar
@@ -40,8 +42,7 @@ public class myprofile extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.option1){
-            Intent i = new Intent(getApplicationContext(),MainActivity.class);
-            startActivity(i);
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));
             mAuth.signOut();
         }
         return super.onOptionsItemSelected(item);
