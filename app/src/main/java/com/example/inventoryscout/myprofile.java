@@ -26,6 +26,10 @@ public class myprofile extends AppCompatActivity {
         Intent i = new Intent(this,insertItems.class);
         startActivity(i);
     }
+    public void showInventory(View view){
+        Intent i = new Intent(this,ShowInventory.class);
+        startActivity(i);
+    }
 
     //MenuBar
     public boolean onCreateOptionsMenu(Menu menu){

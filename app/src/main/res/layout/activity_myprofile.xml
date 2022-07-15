@@ -39,6 +39,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:onClick="showInventory"
             android:text="Show Inventary" />
 
         <Space
@@ -51,18 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="insertItem"
-            android:text="Add new Item" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Delete Item" />
+            android:text="Modify Item" />
 
         <Space
             android:layout_width="match_parent"
@@ -73,7 +63,8 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Update Item" />
+            android:onClick="insertItem"
+            android:text="Make pdf" />
 
         <Space
             android:layout_width="match_parent"
