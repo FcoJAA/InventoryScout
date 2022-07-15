@@ -89,7 +89,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/tvShow"
+                android:id="@+id/tvShow4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -108,7 +108,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/tvShow4"
+                android:id="@+id/tvShow5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -127,7 +127,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/tvShow5"
+                android:id="@+id/tvShow6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -146,7 +146,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/tvShow6"
+                android:id="@+id/tvShow7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -165,7 +165,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/tvShow7"
+                android:id="@+id/tvShow8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -184,11 +184,15 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/tvShow8"
+                android:id="@+id/tvShow9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20sp" />
         </LinearLayout>
     </ScrollView>
 
