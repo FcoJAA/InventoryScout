@@ -43,7 +43,7 @@ public class insertItems extends AppCompatActivity {
 
     }
 
-    public void insertItem1(View view){
+    public void insertItem1(){
         //Item1
         Map<String, Object> data1 = new HashMap<>();
         String item1 = etinsert1.getText().toString();

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InventoryScout">
         <activity
+            android:name=".MakePDF"
+            android:exported="false" />
+        <activity
             android:name=".ShowInventory"
             android:exported="false" />
         <activity
