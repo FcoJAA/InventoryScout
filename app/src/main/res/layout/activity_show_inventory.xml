@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#403208"
-    android:backgroundTint="#AC8719"
+    android:background="@drawable/iventorywallpaper1"
     tools:context=".ShowInventory">
 
     <ScrollView
-        android:layout_width="323dp"
-        android:layout_height="592dp"
+        android:layout_width="340dp"
+        android:layout_height="634dp"
         android:background="#817962"
-        android:backgroundTint="#817962"
+        android:backgroundTint="#A4817962"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +26,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Tornillo:"
                 android:textColor="#000000"
                 android:textSize="24sp" />
@@ -47,7 +47,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Eliminar:"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/et1delete"
@@ -73,6 +74,7 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Tuerca:"
                 android:textColor="#000000"
                 android:textSize="24sp" />
@@ -93,7 +95,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Eliminar:"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/et2delete"

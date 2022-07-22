@@ -37,7 +37,6 @@ public class ShowInventory extends AppCompatActivity {
 
         et1delete = (EditText) findViewById(R.id.et1delete);
         et2delete = (EditText) findViewById(R.id.et2delete);
-
         tvshow1 = (TextView) findViewById(R.id.tvShow1);
         tvshow2 = (TextView) findViewById(R.id.tvShow2);
         tvshow3 = (TextView) findViewById(R.id.tvShow3);
@@ -51,7 +50,6 @@ public class ShowInventory extends AppCompatActivity {
        for (int i = 0; i <9;i++) {
             mostrar(items[i]);
         }
-
     }
 
     public void mostrar(String value) {
@@ -72,14 +70,12 @@ public class ShowInventory extends AppCompatActivity {
                         if(value.equals("Destornillador de Estrella")){tvshow7.setText(document.get("Unidades").toString());}
                         if(value.equals("Arandela")){tvshow8.setText(document.get("Unidades").toString());}
                         if(value.equals("Cinta Americana")){tvshow9.setText(document.get("Unidades").toString());}
-
                     } else {
                         Toast.makeText(ShowInventory.this, "Error", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(ShowInventory.this, "Error", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
     }
@@ -93,48 +89,59 @@ public class ShowInventory extends AppCompatActivity {
                 public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                     DocumentSnapshot document = task.getResult();
                     if (task.isSuccessful()) {
-                        if (document.exists()) {
-                        } else {
-                            Toast.makeText(ShowInventory.this, "Error", Toast.LENGTH_SHORT).show();
-                        }
                         oldValue1[0] = document.get("Unidades").toString();
                         Toast.makeText(getApplicationContext(), oldValue1[0], Toast.LENGTH_LONG).show();
-
-                        //Item1
                         Map<String, Object> data1 = new HashMap<>();
                         String item1 = oldValue1[0] + et1delete.getText().toString();
                         int num1 = Integer.parseInt(oldValue1[0]);
                         int num2 = Integer.parseInt(et1delete.getText().toString());
-                        int resultado;
-                        if(num1 > 0 ){
-                            resultado = num1 + num2;
-                        }else{
-                            resultado = num1 - num2;
+                        int resultado = operacion(num1, num2);
+                        data1.put("Unidades", resultado);
+                        if (item1.equals("")) {
+                        } else {
+                            db.collection(colletionpath1).document("Tornillos").set(data1);
                         }
-
-                        data1.put("Unidades", resultado );
-
-                        if(item1.equals("")){}else {
-                            db.collection(colletionpath1).document("Tornillos").set(data1)
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) { Toast.makeText(ShowInventory.this, "ERROR", Toast.LENGTH_SHORT).show(); }
-                                    });
-                        }
-
-
                     }
-
                 }
             });
-        new android.os.Handler(Looper.getMainLooper()).postDelayed(
-                new Runnable() {
-                    public void run() {
-                        for (int i = 0; i <9;i++) {
-                            mostrar(items[i]);
+            DocumentReference docRef2 = db.collection(colletionpath1).document((items[1]));
+            docRef2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    DocumentSnapshot document = task.getResult();
+                    if (task.isSuccessful()) {
+                        oldValue1[0] = document.get("Unidades").toString();
+                        Toast.makeText(getApplicationContext(), oldValue1[0], Toast.LENGTH_LONG).show();
+                        Map<String, Object> data = new HashMap<>();
+                        String item1 = oldValue1[0] + et2delete.getText().toString();
+                        int num1 = Integer.parseInt(oldValue1[0]);
+                        int num2 = Integer.parseInt(et2delete.getText().toString());
+                        int resultado = operacion(num1, num2);
+                        data.put("Unidades", resultado);
+                        if (item1.equals("")) {
+                        } else {
+                            db.collection(colletionpath1).document("Tuercas").set(data);
                         }
                     }
-                },
-                300);
+                }
+            });
+
+
+
+
+            new android.os.Handler(Looper.getMainLooper()).postDelayed(
+                    new Runnable() {
+                        public void run() {
+                            for (int i = 0; i < 9; i++) {
+                                mostrar(items[i]);
+                            }
+                        }
+                    },
+                    300);
+    }
+
+    public int operacion(int a , int b){
+        int resultado;
+        return resultado = a + b;
     }
 }
