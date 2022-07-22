@@ -87,7 +87,7 @@ public class ShowInventory extends AppCompatActivity {
         });
     }
 
-
+    //TODO REFACTORIZAR CODIGO
     public void modify(View view){
 
             DocumentReference docRef = db.collection(colletionpath1).document((items[0]));
@@ -106,7 +106,6 @@ public class ShowInventory extends AppCompatActivity {
                         int resultado = operacion(num1, num2);
                         data1.put("Unidades", resultado);
                         db.collection(colletionpath1).document("Tornillos").set(data1);
-
                     }
                 }
             });
@@ -125,10 +124,7 @@ public class ShowInventory extends AppCompatActivity {
                         int num2 = Integer.parseInt(recuperado);
                         int resultado = operacion(num1, num2);
                         data.put("Unidades", resultado);
-                        if (item1.equals("")) {
-                        } else {
-                            db.collection(colletionpath1).document("Tuercas").set(data);
-                        }
+                        db.collection(colletionpath1).document("Tuercas").set(data);
                     }
                 }
             });
@@ -147,10 +143,7 @@ public class ShowInventory extends AppCompatActivity {
                         int num2 = Integer.parseInt(recuperado);
                         int resultado = operacion(num1, num2);
                         data.put("Unidades", resultado);
-                        if (item1.equals("")) {
-                        } else {
-                            db.collection(colletionpath1).document("Tuberias Acero").set(data);
-                        }
+                        db.collection(colletionpath1).document("Tuberias Acero").set(data);
                     }
                 }
             });
@@ -169,10 +162,7 @@ public class ShowInventory extends AppCompatActivity {
                     int num2 = Integer.parseInt(recuperado);
                     int resultado = operacion(num1, num2);
                     data.put("Unidades", resultado);
-                    if (item1.equals("")) {
-                    } else {
-                        db.collection(colletionpath1).document("Tornillo B").set(data);
-                    }
+                    db.collection(colletionpath1).document("Tornillo B").set(data);
                 }
             }
         });
@@ -191,10 +181,7 @@ public class ShowInventory extends AppCompatActivity {
                     int num2 = Integer.parseInt(recuperado);
                     int resultado = operacion(num1, num2);
                     data.put("Unidades", resultado);
-                    if (item1.equals("")) {
-                    } else {
-                        db.collection(colletionpath1).document("Lija").set(data);
-                    }
+                    db.collection(colletionpath1).document("Lija").set(data);
                 }
             }
         });
@@ -213,10 +200,7 @@ public class ShowInventory extends AppCompatActivity {
                     int num2 = Integer.parseInt(recuperado);
                     int resultado = operacion(num1, num2);
                     data.put("Unidades", resultado);
-                    if (item1.equals("")) {
-                    } else {
-                        db.collection(colletionpath1).document("Estropajo").set(data);
-                    }
+                   db.collection(colletionpath1).document("Estropajo").set(data);
                 }
             }
         });
@@ -235,10 +219,7 @@ public class ShowInventory extends AppCompatActivity {
                     int num2 = Integer.parseInt(recuperado);
                     int resultado = operacion(num1, num2);
                     data.put("Unidades", resultado);
-                    if (item1.equals("")) {
-                    } else {
-                        db.collection(colletionpath1).document("Destornillador de Estrella").set(data);
-                    }
+                    db.collection(colletionpath1).document("Destornillador de Estrella").set(data);
                 }
             }
         });
@@ -257,10 +238,7 @@ public class ShowInventory extends AppCompatActivity {
                     int num2 = Integer.parseInt(recuperado);
                     int resultado = operacion(num1, num2);
                     data.put("Unidades", resultado);
-                    if (item1.equals("")) {
-                    } else {
-                        db.collection(colletionpath1).document("Arandela").set(data);
-                    }
+                    db.collection(colletionpath1).document("Arandela").set(data);
                 }
             }
         });
@@ -279,16 +257,11 @@ public class ShowInventory extends AppCompatActivity {
                     int num2 = Integer.parseInt(recuperado);
                     int resultado = operacion(num1, num2);
                     data.put("Unidades", resultado);
-                    if (item1.equals("")) {
-                    } else {
-                        db.collection(colletionpath1).document("Cinta Americana").set(data);
-                    }
+                    db.collection(colletionpath1).document("Cinta Americana").set(data);
                 }
             }
         });
-
-            new android.os.Handler(Looper.getMainLooper()).postDelayed(
-                    new Runnable() {
+            new android.os.Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
                         public void run() {
                             for (int i = 0; i < 9; i++) {
                                 mostrar(items[i]);
@@ -303,16 +276,9 @@ public class ShowInventory extends AppCompatActivity {
         int resultado;
         return resultado = a + b;
     }
-
     public void clearEditText(){
-        et1delete.setText("");
-        et2delete.setText("");
-        et3delete.setText("");
-        et4delete.setText("");
-        et5delete.setText("");
-        et6delete.setText("");
-        et7delete.setText("");
-        et8delete.setText("");
-        et9delete.setText("");
+        et1delete.setText(""); et2delete.setText(""); et3delete.setText("");
+        et4delete.setText(""); et5delete.setText(""); et6delete.setText("");
+        et7delete.setText(""); et8delete.setText(""); et9delete.setText("");
     }
 }
