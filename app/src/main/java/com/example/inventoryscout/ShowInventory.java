@@ -26,7 +26,7 @@ public class ShowInventory extends AppCompatActivity {
     final String colletionpath1 = "MainInventory";
     public TextView tvshow1, tvshow2,tvshow3,tvshow4,tvshow5,tvshow6,tvshow7,tvshow8,tvshow9;
     public String[] items = new String[]{"Tornillos", "Tuercas","Tuberias Acero","Tornillo B","Lija","Estropajo","Destornillador de Estrella","Arandela","Cinta Americana"};
-    public EditText et2delete, et1delete;
+    public EditText et2delete, et1delete,et3delete,et4delete,et5delete,et6delete,et7delete,et8delete,et9delete;
     final String[] oldValue1 = {""};
 
 
@@ -37,6 +37,13 @@ public class ShowInventory extends AppCompatActivity {
 
         et1delete = (EditText) findViewById(R.id.et1delete);
         et2delete = (EditText) findViewById(R.id.et2delete);
+        et3delete = (EditText) findViewById(R.id.et3delete);
+        et4delete = (EditText) findViewById(R.id.et4delete);
+        et5delete = (EditText) findViewById(R.id.et5delete);
+        et6delete = (EditText) findViewById(R.id.et6delete);
+        et7delete = (EditText) findViewById(R.id.et7delete);
+        et8delete = (EditText) findViewById(R.id.et8delete);
+        et9delete = (EditText) findViewById(R.id.et9delete);
         tvshow1 = (TextView) findViewById(R.id.tvShow1);
         tvshow2 = (TextView) findViewById(R.id.tvShow2);
         tvshow3 = (TextView) findViewById(R.id.tvShow3);
