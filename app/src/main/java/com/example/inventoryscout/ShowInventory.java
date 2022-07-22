@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -126,6 +127,14 @@ public class ShowInventory extends AppCompatActivity {
 
                 }
             });
-            
+        new android.os.Handler(Looper.getMainLooper()).postDelayed(
+                new Runnable() {
+                    public void run() {
+                        for (int i = 0; i <9;i++) {
+                            mostrar(items[i]);
+                        }
+                    }
+                },
+                300);
     }
 }
