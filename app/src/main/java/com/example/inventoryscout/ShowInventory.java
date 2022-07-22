@@ -97,17 +97,16 @@ public class ShowInventory extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (task.isSuccessful()) {
                         oldValue1[0] = document.get("Unidades").toString();
-                        Toast.makeText(getApplicationContext(), oldValue1[0], Toast.LENGTH_LONG).show();
                         Map<String, Object> data1 = new HashMap<>();
                         String item1 = oldValue1[0] + et1delete.getText().toString();
                         int num1 = Integer.parseInt(oldValue1[0]);
-                        int num2 = Integer.parseInt(et1delete.getText().toString());
+                        String recuperado = et1delete.getText().toString();
+                        if (recuperado.equals("")) { recuperado = "0";}
+                        int num2 = Integer.parseInt(recuperado);
                         int resultado = operacion(num1, num2);
                         data1.put("Unidades", resultado);
-                        if (item1.equals("")) {
-                        } else {
-                            db.collection(colletionpath1).document("Tornillos").set(data1);
-                        }
+                        db.collection(colletionpath1).document("Tornillos").set(data1);
+
                     }
                 }
             });
@@ -118,11 +117,12 @@ public class ShowInventory extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (task.isSuccessful()) {
                         oldValue1[0] = document.get("Unidades").toString();
-                        Toast.makeText(getApplicationContext(), oldValue1[0], Toast.LENGTH_LONG).show();
                         Map<String, Object> data = new HashMap<>();
                         String item1 = oldValue1[0] + et2delete.getText().toString();
                         int num1 = Integer.parseInt(oldValue1[0]);
-                        int num2 = Integer.parseInt(et2delete.getText().toString());
+                        String recuperado = et2delete.getText().toString();
+                        if (recuperado.equals("")) { recuperado = "0";}
+                        int num2 = Integer.parseInt(recuperado);
                         int resultado = operacion(num1, num2);
                         data.put("Unidades", resultado);
                         if (item1.equals("")) {
@@ -132,9 +132,160 @@ public class ShowInventory extends AppCompatActivity {
                     }
                 }
             });
-
-
-
+            DocumentReference docRef3 = db.collection(colletionpath1).document((items[2]));
+            docRef3.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    DocumentSnapshot document = task.getResult();
+                    if (task.isSuccessful()) {
+                        oldValue1[0] = document.get("Unidades").toString();
+                        Map<String, Object> data = new HashMap<>();
+                        String item1 = oldValue1[0] + et3delete.getText().toString();
+                        int num1 = Integer.parseInt(oldValue1[0]);
+                        String recuperado = et3delete.getText().toString();
+                        if (recuperado.equals("")) { recuperado = "0";}
+                        int num2 = Integer.parseInt(recuperado);
+                        int resultado = operacion(num1, num2);
+                        data.put("Unidades", resultado);
+                        if (item1.equals("")) {
+                        } else {
+                            db.collection(colletionpath1).document("Tuberias Acero").set(data);
+                        }
+                    }
+                }
+            });
+        DocumentReference docRef4 = db.collection(colletionpath1).document((items[3]));
+        docRef4.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot document = task.getResult();
+                if (task.isSuccessful()) {
+                    oldValue1[0] = document.get("Unidades").toString();
+                    Map<String, Object> data = new HashMap<>();
+                    String item1 = oldValue1[0] + et4delete.getText().toString();
+                    int num1 = Integer.parseInt(oldValue1[0]);
+                    String recuperado = et4delete.getText().toString();
+                    if (recuperado.equals("")) { recuperado = "0";}
+                    int num2 = Integer.parseInt(recuperado);
+                    int resultado = operacion(num1, num2);
+                    data.put("Unidades", resultado);
+                    if (item1.equals("")) {
+                    } else {
+                        db.collection(colletionpath1).document("Tornillo B").set(data);
+                    }
+                }
+            }
+        });
+        DocumentReference docRef5 = db.collection(colletionpath1).document((items[4]));
+        docRef5.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot document = task.getResult();
+                if (task.isSuccessful()) {
+                    oldValue1[0] = document.get("Unidades").toString();
+                    Map<String, Object> data = new HashMap<>();
+                    String item1 = oldValue1[0] + et5delete.getText().toString();
+                    int num1 = Integer.parseInt(oldValue1[0]);
+                    String recuperado = et5delete.getText().toString();
+                    if (recuperado.equals("")) { recuperado = "0";}
+                    int num2 = Integer.parseInt(recuperado);
+                    int resultado = operacion(num1, num2);
+                    data.put("Unidades", resultado);
+                    if (item1.equals("")) {
+                    } else {
+                        db.collection(colletionpath1).document("Lija").set(data);
+                    }
+                }
+            }
+        });
+        DocumentReference docRef6 = db.collection(colletionpath1).document((items[5]));
+        docRef6.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot document = task.getResult();
+                if (task.isSuccessful()) {
+                    oldValue1[0] = document.get("Unidades").toString();
+                    Map<String, Object> data = new HashMap<>();
+                    String item1 = oldValue1[0] + et6delete.getText().toString();
+                    int num1 = Integer.parseInt(oldValue1[0]);
+                    String recuperado = et6delete.getText().toString();
+                    if (recuperado.equals("")) { recuperado = "0";}
+                    int num2 = Integer.parseInt(recuperado);
+                    int resultado = operacion(num1, num2);
+                    data.put("Unidades", resultado);
+                    if (item1.equals("")) {
+                    } else {
+                        db.collection(colletionpath1).document("Estropajo").set(data);
+                    }
+                }
+            }
+        });
+        DocumentReference docRef7 = db.collection(colletionpath1).document((items[6]));
+        docRef7.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot document = task.getResult();
+                if (task.isSuccessful()) {
+                    oldValue1[0] = document.get("Unidades").toString();
+                    Map<String, Object> data = new HashMap<>();
+                    String item1 = oldValue1[0] + et7delete.getText().toString();
+                    int num1 = Integer.parseInt(oldValue1[0]);
+                    String recuperado = et7delete.getText().toString();
+                    if (recuperado.equals("")) { recuperado = "0";}
+                    int num2 = Integer.parseInt(recuperado);
+                    int resultado = operacion(num1, num2);
+                    data.put("Unidades", resultado);
+                    if (item1.equals("")) {
+                    } else {
+                        db.collection(colletionpath1).document("Destornillador de Estrella").set(data);
+                    }
+                }
+            }
+        });
+        DocumentReference docRef8 = db.collection(colletionpath1).document((items[7]));
+        docRef8.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot document = task.getResult();
+                if (task.isSuccessful()) {
+                    oldValue1[0] = document.get("Unidades").toString();
+                    Map<String, Object> data = new HashMap<>();
+                    String item1 = oldValue1[0] + et8delete.getText().toString();
+                    int num1 = Integer.parseInt(oldValue1[0]);
+                    String recuperado = et8delete.getText().toString();
+                    if (recuperado.equals("")) { recuperado = "0";}
+                    int num2 = Integer.parseInt(recuperado);
+                    int resultado = operacion(num1, num2);
+                    data.put("Unidades", resultado);
+                    if (item1.equals("")) {
+                    } else {
+                        db.collection(colletionpath1).document("Arandela").set(data);
+                    }
+                }
+            }
+        });
+        DocumentReference docRef9 = db.collection(colletionpath1).document((items[8]));
+        docRef9.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot document = task.getResult();
+                if (task.isSuccessful()) {
+                    oldValue1[0] = document.get("Unidades").toString();
+                    Map<String, Object> data = new HashMap<>();
+                    String item1 = oldValue1[0] + et9delete.getText().toString();
+                    int num1 = Integer.parseInt(oldValue1[0]);
+                    String recuperado = et9delete.getText().toString();
+                    if (recuperado.equals("")) { recuperado = "0";}
+                    int num2 = Integer.parseInt(recuperado);
+                    int resultado = operacion(num1, num2);
+                    data.put("Unidades", resultado);
+                    if (item1.equals("")) {
+                    } else {
+                        db.collection(colletionpath1).document("Cinta Americana").set(data);
+                    }
+                }
+            }
+        });
 
             new android.os.Handler(Looper.getMainLooper()).postDelayed(
                     new Runnable() {
@@ -142,6 +293,7 @@ public class ShowInventory extends AppCompatActivity {
                             for (int i = 0; i < 9; i++) {
                                 mostrar(items[i]);
                             }
+                            clearEditText();
                         }
                     },
                     300);
@@ -150,5 +302,17 @@ public class ShowInventory extends AppCompatActivity {
     public int operacion(int a , int b){
         int resultado;
         return resultado = a + b;
+    }
+
+    public void clearEditText(){
+        et1delete.setText("");
+        et2delete.setText("");
+        et3delete.setText("");
+        et4delete.setText("");
+        et5delete.setText("");
+        et6delete.setText("");
+        et7delete.setText("");
+        et8delete.setText("");
+        et9delete.setText("");
     }
 }
