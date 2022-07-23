@@ -38,8 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:autoSizeTextType="uniform"
-            android:background="@color/purple_500"
-            android:backgroundTint="#7AFFFFFF"
+            android:background="@drawable/et1"
             android:backgroundTintMode="src_in"
             android:ems="10"
             android:hint="Enter your email"
@@ -71,8 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:autoSizeTextType="uniform"
-            android:background="@color/purple_500"
-            android:backgroundTint="#7AFFFFFF"
+            android:background="@drawable/et1"
             android:backgroundTintMode="src_in"
             android:ems="10"
             android:hint="Introduce tu contraseña"
@@ -89,11 +87,13 @@
 
         <Button
             android:id="@+id/btn1login"
-            android:layout_width="150dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/boton_log"
             android:onClick="login"
-            android:text="send" />
+            android:text="send"
+            android:textSize="16sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -101,11 +101,13 @@
 
         <Button
             android:id="@+id/btn2login"
-            android:layout_width="150dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/boton2_log"
             android:onClick="changeToResetPassword"
-            android:text="Reset your password" />
+            android:text="Reset your password"
+            android:textSize="16sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
