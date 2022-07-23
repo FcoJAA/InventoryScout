@@ -22,9 +22,7 @@ public  class myprofile extends AppCompatActivity {
         mAuth =FirebaseAuth.getInstance();
     }
 
-    public void insertItem(View view){
-        startActivity(new Intent(this,insertItems.class));
-    }
+
     public void showInventory(View view){
         startActivity(new Intent(this,ShowInventory.class));
     }

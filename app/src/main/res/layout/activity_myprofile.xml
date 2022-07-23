@@ -27,7 +27,7 @@
             android:gravity="center"
             android:text="Welcome"
             android:textColor="#000000"
-            android:textSize="24sp"
+            android:textSize="34sp"
             android:textStyle="bold" />
 
         <Space
@@ -36,11 +36,14 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="200dp"
-            android:layout_height="100sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/boton_redondo"
             android:onClick="showInventory"
-            android:text="Show Inventory" />
+            android:text="Show Inventory"
+            android:textColor="#303300"
+            android:textSize="20sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -49,10 +52,13 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="200sp"
-            android:layout_height="100sp"
+            android:layout_height="200sp"
             android:layout_gravity="center"
+            android:background="@drawable/boton_reset"
             android:onClick="changeToResetPassword"
-            android:text="Reset Password" />
+            android:text="Reset Password"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
 
         <Space
             android:layout_width="match_parent"
