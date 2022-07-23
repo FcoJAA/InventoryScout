@@ -28,7 +28,6 @@ public  class myprofile extends AppCompatActivity {
     public void showInventory(View view){
         startActivity(new Intent(this,ShowInventory.class));
     }
-
     public void changeToResetPassword(View view){
         startActivity(new Intent(this,resetpassword.class));
     }
